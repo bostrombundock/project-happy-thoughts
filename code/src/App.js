@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import ThoughtForm from 'components/ThoughtForm'
 import ThoughtItem from 'components/ThoughtItem'
 
-import { API_URL, LIKES_URL } from './utilis/url'
 
 export const App = () => {
   const [thought, setThought] = useState([])
@@ -18,7 +17,7 @@ export const App = () => {
 
   const fetchThought = () => {
     setLoading(true);
-    fetch(API_URL)
+    fetch(`https://happy-thoughts-technigo.herokuapp.com/thoughts`)
       .then((res) => res.json())
       .then((data) => setThought(data))
       .finally(() => setLoading(false))
@@ -35,9 +34,9 @@ export const App = () => {
       body: JSON.stringify({ message: newThought }),
     }
 
-    fetch(API_URL, options)
+    fetch(`https://happy-thoughts-technigo.herokuapp.com/thoughts`, options)
       .then((res) => res.json())
-      .then((data) => {
+      .then(() => {
         fetchThought(setNewThought(""))
       })
   }
