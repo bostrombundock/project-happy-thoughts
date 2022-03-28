@@ -51,7 +51,7 @@ export const App = () => {
       },
     }
    
-    fetch(`https://happy-thoughts-technigo.herokuapp.com/thoughts/${messageID}/like`, options)
+    fetch(`https://happy-thoughts-technigo.herokuapp.com/thoughts/${thoughtId}/like`, options)
     .then(res => res.json())
     .then(() => fetchThought())
   
