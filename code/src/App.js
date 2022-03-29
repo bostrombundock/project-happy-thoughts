@@ -41,7 +41,7 @@ export const App = () => {
       })
   }
 
-  
+
   const handleIncreaseLikes = (thoughtId) => {
     const options = {
       method: 'POST',
@@ -49,13 +49,13 @@ export const App = () => {
         'Content-Type': 'application/json'
       },
     }
-   
+
     fetch(`https://happy-thoughts-technigo.herokuapp.com/thoughts/${thoughtId}/like`, options)
-    .then(res => res.json())
-    .then(() => fetchThought())
-  
-    }
-    
+      .then(res => res.json())
+      .then(() => fetchThought())
+    fetchThought()
+  }
+
   return (
     <main>
 

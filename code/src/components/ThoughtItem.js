@@ -11,7 +11,7 @@ const ThoughtItem = ({ thought, onIncreaseLikes }) => {
             <div className='like-container' >
                 <button
                     className={thought.hearts > 0 ? "heart-btn liked" : "heart-btn"}
-                    onClick={() => onIncreaseLikes(thought._Id)} 
+                    onClick={() => onIncreaseLikes(thought._id)} 
                 >
                     <span role="img" aria-label="like-heart">
                     💗
