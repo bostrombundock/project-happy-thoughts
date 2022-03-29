@@ -98,12 +98,4 @@ form {
   justify-items: flex-end;
   }
 
- @media (min-width: 768px) {
-  .thought-container {
-  width: 50%;
-   display: flex;
-   position: relative;
-  }
-
-  
- }
+ 
