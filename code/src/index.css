@@ -14,21 +14,20 @@ code {
 }
 
 h1 {
-  font-size: 14px;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 form {
   display: flex;
+  max-width: 400px;
   background-color: #f2f0f0;
   border: 1px solid;
   flex-direction: column;
-  width: 400px;
   padding: 10px;
   box-shadow: 5px 5px #000;
   text-align: center;
   margin: 20px auto 10px;
-
 }
 
 .hearts {
@@ -39,11 +38,12 @@ form {
   margin-bottom: 16px;
   min-height: 70px;
 }
+
 .thought-container {
   display: flex;
   background-color: #ffff;
   border: 1px solid;
-  width: 400px;
+  max-width: 400px;
   text-align: center;
   margin: 30px auto;
   padding: 10px;
@@ -57,7 +57,6 @@ form {
 
 .thought-message {
   width: 100%;
-
 }
 
 .submit-button {
@@ -96,6 +95,13 @@ form {
   text-align: right;
   margin-top: 16px;
   justify-items: flex-end;
-  }
+}
 
- 
+@media screen and (min-width: 1024px) {    
+}
+    
+@media screen and (min-width: 860px) {
+}   
+
+@media screen and (min-width: 767px) {
+}
