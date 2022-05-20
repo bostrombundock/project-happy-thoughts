@@ -17,7 +17,7 @@ export const App = () => {
 
   const fetchThought = () => {
     setLoading(true);
-    fetch(`https://happy-thoughts-technigo.herokuapp.com/thoughts`)
+    fetch(`https://appy-thoughts.herokuapp.com//thoughts`)
       .then((res) => res.json())
       .then((data) => setThought(data))
       .finally(() => setLoading(false))
@@ -33,8 +33,9 @@ export const App = () => {
       },
       body: JSON.stringify({ message: newThought }),
     }
+//orginal url `https://happy-thoughts-technigo.herokuapp.com/thoughts`
 
-    fetch(`https://happy-thoughts-technigo.herokuapp.com/thoughts`, options)
+    fetch(`https://appy-thoughts.herokuapp.com/thoughts`, options)
       .then((res) => res.json())
       .then(() => {
         fetchThought(setNewThought(""))
@@ -50,7 +51,7 @@ export const App = () => {
       },
     }
 
-    fetch(`https://happy-thoughts-technigo.herokuapp.com/thoughts/${thoughtId}/like`, options)
+    fetch(`https://appy-thoughts.herokuapp.com/${thoughtId}/like`, options)
       .then(res => res.json())
       .then(() => fetchThought())
     fetchThought()
