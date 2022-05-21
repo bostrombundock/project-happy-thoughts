@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 
 import ThoughtForm from 'components/ThoughtForm'
@@ -16,7 +17,7 @@ export const App = () => {
 
   const fetchThought = () => {
     setLoading(true);
-    fetch('https://appy-thoughts.herokuapp.com/thoughts')
+    fetch('https://happy-thoughts-technigo.herokuapp.com/thought')
       .then((res) => res.json())
       .then((data) => setThought(data))
       .finally(() => setLoading(false))
@@ -32,8 +33,10 @@ export const App = () => {
       },
       body: JSON.stringify({ message: newThought }),
     }
+//orginal url `https://happy-thoughts-technigo.herokuapp.com/thoughts`
 
-    fetch('https://appy-thoughts.herokuapp.com/thoughts', options)
+    // fetch('https://appy-thoughts.herokuapp.com/thoughts', options)
+    fetch('https://happy-thoughts-technigo.herokuapp.com/thought', options)
       .then((res) => res.json())
       .then(() => {
         fetchThought(setNewThought(""))
@@ -49,7 +52,7 @@ export const App = () => {
       },
     }
 
-    fetch(`https://appy-thoughts.herokuapp.com/thoughts/${thoughtId}/like`, options)
+    fetch(`https://happy-thoughts-technigo.herokuapp.com/${thoughtId}/like`, options)
       .then(res => res.json())
       .then(() => fetchThought())
     fetchThought()
